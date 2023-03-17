@@ -1,1 +1,1 @@
-# innovation_hack_2023
+# innovationhack-2023
