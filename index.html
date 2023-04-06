@@ -17,6 +17,7 @@
       <a href="#about" class="w3-bar-item w3-button">Über uns</a>
       <a href="#challenges" class="w3-bar-item w3-button">Challenges</a>
       <!--<a href="#solutions" class="w3-bar-item w3-button">Lösungen</a>-->
+      <a href="#impressionen" class="w3-bar-item w3-button">Impressionen</a>
     </div>
   </div>
 </div>
@@ -95,6 +96,29 @@
     <iframe class="airtable-embed" src="https://airtable.com/embed/shrXMdrWnAKV6TYdU?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>      
   </div>
   -->
+  
+  <!-- Image Slider -->
+   <div class="w3-container w3-padding-32" id="impressionen">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Impressionen</h2>
+    <div class="w3-content w3-display-container" >
+      <img class="mySlides" src="https://eden-frankfurt.com/fileadmin/user_upload/Eden-Frankfurt-Fassade.jpg" style="width:100%">
+      <img class="mySlides" src="https://www.hydroplant.ch/wp-content/uploads/2020/02/Aussenbegru%CC%88nung_Globus_Bern_02.jpg" style="width:100%">
+      <img class="mySlides" src="https://gruenstattgrau.at/wp-content/uploads/2019/01/gruenaktivhaus_ulrike_pitha-900x506.jpg" style="width:100%">
+      <img class="mySlides" src="https://www.colt-info.de/assets/images/4/EWE-Arena-Oldenburg-glassfassde-b6f737fd.webp" style="width:100%">
+
+      <button class="w3-button w3-light-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-light-grey w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+    </div>
+    <div>
+      <p>Quellen<br>
+        https://eden-frankfurt.com/<br>
+        https://www.hydroplant.ch/<br>
+        https://gruenstattgrau.at/projekt/gruenaktivhaus/<br>
+        https://www.colt-info.de/sonderloesungen-sonnenschutz.html
+      </p>
+    </div>
+  </div>
 
 <br>
   <!-- Logos Section -->
@@ -144,11 +168,30 @@
 <!-- End page content -->
 </div>
 
-
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <p>2023</p>
 </footer>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 </body>
 </html>
